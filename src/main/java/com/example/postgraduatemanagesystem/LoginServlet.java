@@ -1,13 +1,9 @@
 package com.example.postgraduatemanagesystem;
 
 import java.io.*;
-
-import com.microsoft.sqlserver.jdbc.SQLServerDatabaseMetaData;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import java.sql.*;
-import com.microsoft.sqlserver.jdbc.SQLServerDriver;
-
 
 public class LoginServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
