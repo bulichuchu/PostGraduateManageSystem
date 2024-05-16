@@ -5,11 +5,19 @@
          version="5.0">
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>com.example.postgraduatemanagesystem.LoginServlet</servlet-class>
+        <servlet-class>com.example.postgraduatemanagesystem.servlet.LoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ChangePasswordServlet</servlet-name>
+        <servlet-class>com.example.postgraduatemanagesystem.servlet.ChangePasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChangePasswordServlet</servlet-name>
+        <url-pattern>/ChangePasswordServlet</url-pattern>
     </servlet-mapping>
 
 </web-app>

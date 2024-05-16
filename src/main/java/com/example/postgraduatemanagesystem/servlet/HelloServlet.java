@@ -1,4 +1,4 @@
-package com.example.postgraduatemanagesystem;
+package com.example.postgraduatemanagesystem.servlet;
 
 import java.io.*;
 
