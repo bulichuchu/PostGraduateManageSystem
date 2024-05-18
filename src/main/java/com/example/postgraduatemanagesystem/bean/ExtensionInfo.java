@@ -26,7 +26,7 @@ public class ExtensionInfo implements Serializable {
     private String familyPhone;
     private String familyContact;
 
-    ExtensionInfo() {
+    public ExtensionInfo() {
     }
 
     public int getStudentID() {

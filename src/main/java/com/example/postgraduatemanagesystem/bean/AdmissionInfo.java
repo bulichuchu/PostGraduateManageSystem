@@ -25,7 +25,8 @@ public class AdmissionInfo implements Serializable{
     private String finalGraduationDate;
     private String finalDegreeDate;
     private String finalAcademicLearningForm;
-    AdmissionInfo(){
+
+     public AdmissionInfo(){
     }
 
     public int getStudentID() {

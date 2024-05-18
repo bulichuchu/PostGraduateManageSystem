@@ -3,27 +3,29 @@ package com.example.postgraduatemanagesystem.servlet;
 
 import java.io.*;
 
+import com.example.postgraduatemanagesystem.DaoImpl.PostGraduateDAOImpl;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
-import com.example.postgraduatemanagesystem.DAO.PostGraduateDAO;
 
 public class ChangePasswordServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("username");
+        HttpSession session = request.getSession();
+        String userid = (String) session.getAttribute("userid");
+        String password = (String) session.getAttribute("password");
+        String oldPassword = request.getParameter("currentPassword");
         String newPassword = request.getParameter("newPassword");
-
-        PostGraduateDAO postGraduateDAO = new PostGraduateDAO();
-        boolean isChanged = postGraduateDAO.changePassword(username, newPassword);
-        boolean LoginStatusChanged = postGraduateDAO.changeLoginStatus(username, newPassword);
-
-        if (isChanged&&LoginStatusChanged) {
-            HttpSession session = request.getSession();
-            session.setAttribute("username", username);
-            response.sendRedirect("success.jsp");
-        } else {
-            response.sendRedirect("changePassword.jsp?error=changeFailed&username=" + username);
+        if (password.equals(oldPassword)){
+            PostGraduateDAOImpl postGraduateDAO = new PostGraduateDAOImpl();
+            if (postGraduateDAO.changePassword(userid, newPassword)&&
+            postGraduateDAO.changeLoginStatus(userid, newPassword)) {
+                response.sendRedirect("Info.jsp");
+            }
+        }
+        else {
+            request.setAttribute("message", "与原密码不符，请重新输入！");
+            request.getRequestDispatcher("changePassword.jsp").forward(request, response);
         }
     }
 }

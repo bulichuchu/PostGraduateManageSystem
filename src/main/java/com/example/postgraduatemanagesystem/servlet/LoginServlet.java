@@ -1,36 +1,43 @@
 package com.example.postgraduatemanagesystem.servlet;
 
-import com.example.postgraduatemanagesystem.DAO.PostGraduateDAO;
-import com.example.postgraduatemanagesystem.DAO.UserDAO;
+
+import com.example.postgraduatemanagesystem.DaoImpl.PostGraduateDAOImpl;
+import com.example.postgraduatemanagesystem.DaoImpl.UserDAOImpl;
+import com.example.postgraduatemanagesystem.bean.User;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
 public class LoginServlet extends HttpServlet {
+
+
+
     private static final long serialVersionUID = 1L;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("username");
+        String userid = request.getParameter("userid");
         String password = request.getParameter("password");
 
-
-        UserDAO userDAO = new UserDAO();
-        boolean isValid = userDAO.validate(username, password);
-
-        if (isValid) {
-            String role = userDAO.getRole(username, password);
+        UserDAOImpl userDAO = new UserDAOImpl();
+        User user = userDAO.getUser(userid, password);
+        if (user != null) {
+            String role = user.getRole();
+            HttpSession session = request.getSession();
+            session.setAttribute("userid", userid);
+            session.setAttribute("password", password);
             switch (role) {
                 case "研究生":
-                    PostGraduateDAO postGraduateDAO = new PostGraduateDAO();
-                    if (postGraduateDAO.isFirstLogin(username, password)) {
-                        response.sendRedirect("changePassword.jsp?username=" + username);
+                    if (user.getIsfirstlogin().equals("1")) {
+                        response.sendRedirect("changePassword.jsp");
                     } else {
-                        response.sendRedirect("student.jsp");
+                        RequestDispatcher dispatcher = request.getRequestDispatcher("/InfoServlet");
+                        dispatcher.forward(request, response);
                     }
-                    response.sendRedirect("admin.jsp");
                     break;
                 case "导师":
                     response.sendRedirect("student.jsp");

@@ -19,5 +19,12 @@
         <servlet-name>ChangePasswordServlet</servlet-name>
         <url-pattern>/ChangePasswordServlet</url-pattern>
     </servlet-mapping>
-
+    <servlet>
+        <servlet-name>InfoServlet</servlet-name>
+        <servlet-class>com.example.postgraduatemanagesystem.servlet.InfoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InfoServlet</servlet-name>
+        <url-pattern>/InfoServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

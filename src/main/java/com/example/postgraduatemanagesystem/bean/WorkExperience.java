@@ -7,12 +7,11 @@ public class WorkExperience implements Serializable{
     private Date startTime;
     private Date endTime;
     private String workUnit;
-    private String workCategory;
     private String workPosition;
     private String workDuty;
     private String provePerson;
     private String notes;
-    WorkExperience() {
+    public WorkExperience() {
     }
 
     public int getStudentID() {
@@ -45,14 +44,6 @@ public class WorkExperience implements Serializable{
 
     public void setWorkUnit(String workUnit) {
         this.workUnit = workUnit;
-    }
-
-    public String getWorkCategory() {
-        return workCategory;
-    }
-
-    public void setWorkCategory(String workCategory) {
-        this.workCategory = workCategory;
     }
 
     public String getWorkPosition() {

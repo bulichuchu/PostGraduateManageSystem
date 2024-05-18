@@ -13,7 +13,7 @@ public class EducationExperience implements Serializable{
     private String graduatePosition;
     private String restTime;
     private String isGraduate;
-    EducationExperience() {
+    public EducationExperience() {
     }
 
     public int getStudentID() {
