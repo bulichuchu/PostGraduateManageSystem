@@ -78,6 +78,41 @@ public class UserDAOImpl implements UserDAO {
             }
         }
         return user;
+    }public User getUser(String userid) {
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        User user = new User();
+        try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            Connection con = DriverManager.getConnection(connectionUrl);
+            // 查询用户表
+            String sql = "SELECT * FROM users WHERE UserID=?";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, userid);
+            rs = pstmt.executeQuery();
+
+
+            if (rs.next()) {
+                user.setUserID(rs.getString("UserID"));
+                user.setUsername(rs.getString("username"));
+                user.setPassword(rs.getString("password"));
+                user.setRole(rs.getString("role"));
+                user.setIsfirstlogin(rs.getString("isFirstLogin"));
+            }
+            else {
+                user = null;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (rs != null) rs.close();
+                if (pstmt != null) pstmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return user;
     }
 
 }

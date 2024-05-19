@@ -70,9 +70,6 @@
         .info-table th {
             background-color: #f2f2f2;
         }
-        .info-section {
-            margin-bottom: 20px;
-        }
     </style>
     <script>
         function showSection(sectionId) {

@@ -39,33 +39,21 @@ public class LoginServlet extends HttpServlet {
                         dispatcher.forward(request, response);
                     }
                     break;
-                case "导师":
-                    response.sendRedirect("student.jsp");
+                case "导师","研究生院领导","学校领导":
+                    response.sendRedirect("studentQuery.jsp");
                     break;
-                case "学院研究生秘书":
-                    response.sendRedirect("teacher.jsp");
-                    break;
-                case "学院领导":
+                case "学院研究生秘书","学院领导":
                     response.sendRedirect("teacher.jsp");
                     break;
                 case "研究生院管理员":
                     response.sendRedirect("teacher.jsp");
                     break;
-                case "研究生院领导":
-                    response.sendRedirect("teacher.jsp");
-                    break;
-                case "学校领导":
-                    response.sendRedirect("teacher.jsp");
-                    break;
+
                 case "系统管理员":
                     response.sendRedirect("teacher.jsp");
                     break;
                 case "审计管理员":
                     response.sendRedirect("teacher.jsp");
-                    break;
-
-                default:
-                    response.sendRedirect("failure.jsp");
                     break;
             }
         } else {

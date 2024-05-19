@@ -3,11 +3,11 @@ package com.example.postgraduatemanagesystem.servlet;
 import com.example.postgraduatemanagesystem.DaoImpl.*;
 import com.example.postgraduatemanagesystem.bean.*;
 
-import com.example.postgraduatemanagesystem.dao.AdmissionInfoDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
@@ -23,7 +23,8 @@ public class InfoServlet extends HttpServlet {
     }
 
     private void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String studentID = request.getParameter("userid");
+        HttpSession session = request.getSession();
+        String studentID = (String) session.getAttribute("userid");
         BasicInfoDAOImpl BasicInfoDAO = new BasicInfoDAOImpl();
         BasicInfo basicInfo = BasicInfoDAO.getBasicInfo(studentID);
 

@@ -20,7 +20,8 @@ public class ChangePasswordServlet extends HttpServlet {
             PostGraduateDAOImpl postGraduateDAO = new PostGraduateDAOImpl();
             if (postGraduateDAO.changePassword(userid, newPassword)&&
             postGraduateDAO.changeLoginStatus(userid, newPassword)) {
-                response.sendRedirect("Info.jsp");
+                session.setAttribute("password", newPassword);
+               request.getRequestDispatcher("InfoServlet").forward(request, response);
             }
         }
         else {
