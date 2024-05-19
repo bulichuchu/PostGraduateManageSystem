@@ -3,6 +3,7 @@ package com.example.postgraduatemanagesystem.servlet;
 
 import com.example.postgraduatemanagesystem.DaoImpl.PostGraduateDAOImpl;
 import com.example.postgraduatemanagesystem.DaoImpl.UserDAOImpl;
+import com.example.postgraduatemanagesystem.SM3.SM3Util;
 import com.example.postgraduatemanagesystem.bean.User;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -35,6 +36,7 @@ public class LoginServlet extends HttpServlet {
                     if (user.getIsfirstlogin().equals("1")) {
                         response.sendRedirect("changePassword.jsp");
                     } else {
+                        session.setAttribute("password", SM3Util.hash(password));
                         RequestDispatcher dispatcher = request.getRequestDispatcher("/InfoServlet");
                         dispatcher.forward(request, response);
                     }
