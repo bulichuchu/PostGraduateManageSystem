@@ -1,3 +1,12 @@
 2024-05-21 18:16:41 WARN  LoginServlet:92 - Failed login attempt for user 22
 2024-05-21 18:18:18 WARN  LoginServlet:92 - Failed login attempt for user 124354
 2024-05-21 18:30:24 INFO  LoginServlet:56 - User 11 logged in successfully.
+2024-05-21 19:00:04 INFO  LoginServlet:58 - User 4 logged in successfully.
+2024-05-21 19:00:10 WARN  studentQueryServlet:32 - Failed student query for user 1
+2024-05-21 19:00:42 WARN  studentQueryServlet:32 - Failed student query for user 1
+2024-05-21 19:01:05 WARN  studentQueryServlet:32 - Failed student query for user 1
+2024-05-21 19:02:14 INFO  LoginServlet:58 - User 4 logged in successfully.
+2024-05-21 19:05:11 WARN  studentQueryServlet:32 - Failed student query for user 1
+2024-05-21 19:05:21 INFO  LoginServlet:58 - User 4 logged in successfully.
+2024-05-21 19:05:23 INFO  studentQueryServlet:36 - Successful student query for user 1
+2024-05-21 19:05:25 INFO  InfoServlet:47 - Retrieved information for user 1

@@ -63,6 +63,7 @@ public class UserDAOImpl implements UserDAO {
                 user.setPassword(rs.getString("password"));
                 user.setRole(rs.getString("role"));
                 user.setIsfirstlogin(rs.getString("isFirstLogin"));
+                user.setDepartment(rs.getString("department"));
             }
             else {
                 user = null;

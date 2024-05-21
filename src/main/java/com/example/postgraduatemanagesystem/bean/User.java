@@ -8,6 +8,7 @@ public class User implements Serializable {
     private String password;
     private String role;
     private String isfirstlogin;
+    private String department;
 
     public User() {
     }
@@ -50,5 +51,13 @@ public class User implements Serializable {
 
     public void setIsfirstlogin(String isfirstlogin) {
         this.isfirstlogin = isfirstlogin;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
     }
 }

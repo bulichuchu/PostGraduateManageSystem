@@ -52,7 +52,9 @@ public class LoginServlet extends HttpServlet {
         if (user != null) {
             String role = user.getRole();
             session.setAttribute("userid", userid);
-            session.setAttribute("password", password); // 存储哈希后的密码
+            session.setAttribute("password", password);
+            session.setAttribute("role", role);
+            session.setAttribute("user", user);
             LOGGER.info("User " + userid + " logged in successfully.");
 
             switch (role) {
