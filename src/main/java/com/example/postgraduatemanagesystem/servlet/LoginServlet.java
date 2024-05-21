@@ -1,8 +1,6 @@
 package com.example.postgraduatemanagesystem.servlet;
 
-import com.example.postgraduatemanagesystem.DaoImpl.PostGraduateDAOImpl;
 import com.example.postgraduatemanagesystem.DaoImpl.UserDAOImpl;
-import com.example.postgraduatemanagesystem.SM3.SM3Util;
 import com.example.postgraduatemanagesystem.bean.User;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -10,6 +8,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.io.Serial;
@@ -20,6 +19,7 @@ public class LoginServlet extends HttpServlet {
     private static final int MAX_LOGIN_ATTEMPTS = 5;
     private static final long LOCKOUT_DURATION = 30 * 60 * 1000;
     private static final long SESSION_TIMEOUT = 30 * 60 * 1000;
+    private static final Logger LOGGER = Logger.getLogger(LoginServlet.class.getName());
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -53,7 +53,7 @@ public class LoginServlet extends HttpServlet {
             String role = user.getRole();
             session.setAttribute("userid", userid);
             session.setAttribute("password", password); // 存储哈希后的密码
-
+            LOGGER.info("User " + userid + " logged in successfully.");
 
             switch (role) {
                 case "研究生":
@@ -80,7 +80,7 @@ public class LoginServlet extends HttpServlet {
                     response.sendRedirect("teacher.jsp");
                     break;
                 case "审计管理员":
-                    response.sendRedirect("teacher.jsp");
+                    response.sendRedirect("log.jsp");
                     break;
             }
         } else {
@@ -89,6 +89,7 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("loginAttempts", newLoginAttempts);
             session.setAttribute("message", "用户名或密码错误，请重新输入！");
             response.sendRedirect("login.jsp");
+            LOGGER.warn("Failed login attempt for user " + userid);
         }
     }
 }

@@ -8,11 +8,15 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
+import java.io.Serial;
 
 public class InfoServlet extends HttpServlet {
+    @Serial
     private static final long serialVersionUID = 1L;
+    private static final Logger LOGGER = Logger.getLogger(InfoServlet.class.getName());
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);
@@ -39,6 +43,8 @@ public class InfoServlet extends HttpServlet {
 
         EducationExperienceDAOImpl EducationExperienceDAO = new EducationExperienceDAOImpl();
         EducationExperience educationExperience = EducationExperienceDAO.getEducationExperience(studentID);
+
+        LOGGER.info("Retrieved information for user " + studentID);
 
         request.setAttribute("basicInfo", basicInfo);
         request.setAttribute("admissionInfo", admissionInfo);
