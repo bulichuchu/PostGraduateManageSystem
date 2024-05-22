@@ -10,3 +10,5 @@
 2024-05-21 19:05:21 INFO  LoginServlet:58 - User 4 logged in successfully.
 2024-05-21 19:05:23 INFO  studentQueryServlet:36 - Successful student query for user 1
 2024-05-21 19:05:25 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-05-22 16:18:36 INFO  LoginServlet:58 - User 7 logged in successfully.
+2024-05-22 16:19:09 INFO  LoginServlet:58 - User 7 logged in successfully.

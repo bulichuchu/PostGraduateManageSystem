@@ -35,4 +35,12 @@
         <servlet-name>searchStudent</servlet-name>
         <url-pattern>/searchStudent</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ChangeInfo</servlet-name>
+        <servlet-class>com.example.postgraduatemanagesystem.servlet.ChangeInfoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChangeInfo</servlet-name>
+        <url-pattern>/ChangeStudentInfo</url-pattern>
+    </servlet-mapping>
 </web-app>

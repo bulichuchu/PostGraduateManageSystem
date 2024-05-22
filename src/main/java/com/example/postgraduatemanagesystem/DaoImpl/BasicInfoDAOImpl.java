@@ -14,7 +14,6 @@ public class BasicInfoDAOImpl implements BasicInfoDAO {
     @Override
     public BasicInfo getBasicInfo(String StudentID) {
         BasicInfo basicinfo = new BasicInfo();
-        Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         try {
@@ -107,5 +106,47 @@ public class BasicInfoDAOImpl implements BasicInfoDAO {
             }
         }
         return basicinfo;
+    }
+
+    @Override
+    public boolean updateBasicInfo(BasicInfo updatedInfo) {
+        BasicInfo basicInfo = new BasicInfo();
+        PreparedStatement pstmt = null;
+        try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            Connection con = DriverManager.getConnection(connectionUrl);
+            String sql = "UPDATE BasicInfo SET name = ?, gender = ?, BirthDate = ?, nation = ?, " +
+                    "native_place = ?, political_status = ?, id_number = ?, id_type = ?, " +
+                    "marital_status = ?, BirthPlace = ?, family_address = ?, phone_number = ?, " +
+                    "campus_email = ?, personal_email = ?, join_party_date = ? WHERE StudentID = ?";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, basicInfo.getName());
+            pstmt.setString(2, basicInfo.getGender());
+            pstmt.setDate(3, new java.sql.Date(basicInfo.getBirthDate().getTime()));
+            pstmt.setString(4, basicInfo.getNation());
+            pstmt.setString(5, basicInfo.getNativePlace());
+            pstmt.setString(6, basicInfo.getPoliticalStatus());
+            pstmt.setString(7, basicInfo.getIDNumber());
+            pstmt.setString(8, basicInfo.getIDType());
+            pstmt.setString(9, basicInfo.getMaritalStatus());
+            pstmt.setString(10, basicInfo.getBirthPlace());
+            pstmt.setString(11, basicInfo.getFamilyAddress());
+            pstmt.setString(12, basicInfo.getPhoneNumber());
+            pstmt.setString(13, basicInfo.getCampusEmail());
+            pstmt.setString(14, basicInfo.getPersonalEmail());
+            pstmt.setDate(15, new java.sql.Date(basicInfo.getJoinPartyDate().getTime()));
+            pstmt.setInt(16, basicInfo.getStudentID());
+            pstmt.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (pstmt != null) pstmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return true;
     }
 }

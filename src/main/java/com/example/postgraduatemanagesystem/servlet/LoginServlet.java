@@ -73,10 +73,11 @@ public class LoginServlet extends HttpServlet {
                     response.sendRedirect("studentQuery.jsp");
                     break;
                 case "学院研究生秘书", "学院领导":
-                    response.sendRedirect("teacher.jsp");
+                    session.setAttribute("loginAttempts", 0);
+                    response.sendRedirect("QueryChange.jsp");
                     break;
                 case "研究生院管理员":
-                    response.sendRedirect("teacher.jsp");
+                    response.sendRedirect("reviewInfo.jsp");
                     break;
                 case "系统管理员":
                     response.sendRedirect("teacher.jsp");
