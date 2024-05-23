@@ -65,7 +65,7 @@
             </div>
         </form>
         <%--@elvariable id="errorMessage" type="com.example.postgraduatemanagesystem.servlet.studentQueryServlet"--%>
-        <c:if test="${not empty errorMessage}">
+        <c:if test="${errorMessage}">
             <div class="alert alert-danger text-center">
                     ${errorMessage}
             </div>

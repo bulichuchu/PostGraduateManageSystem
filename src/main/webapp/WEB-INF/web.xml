@@ -37,10 +37,18 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>ChangeInfo</servlet-name>
-        <servlet-class>com.example.postgraduatemanagesystem.servlet.ChangeInfoServlet</servlet-class>
+        <servlet-class>com.example.postgraduatemanagesystem.servlet.QueryChangeServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ChangeInfo</servlet-name>
         <url-pattern>/ChangeStudentInfo</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ReviewInfoServlet</servlet-name>
+        <servlet-class>com.example.postgraduatemanagesystem.servlet.ReviewInfoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReviewInfoServlet</servlet-name>
+        <url-pattern>/ReviewInfoServlet</url-pattern>
     </servlet-mapping>
 </web-app>

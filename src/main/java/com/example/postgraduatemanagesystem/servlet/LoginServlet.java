@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
 
         // 检查登录失败计数器
         Integer loginAttemptsAttribute = (Integer) session.getAttribute("loginAttempts");
-        int loginAttempts = (loginAttemptsAttribute != null) ? loginAttemptsAttribute : 4;
+        int loginAttempts = (loginAttemptsAttribute != null) ? loginAttemptsAttribute : 0;
 
 
         session.setAttribute("lastLoginTime", session.getCreationTime());
@@ -77,7 +77,9 @@ public class LoginServlet extends HttpServlet {
                     response.sendRedirect("QueryChange.jsp");
                     break;
                 case "研究生院管理员":
-                    response.sendRedirect("reviewInfo.jsp");
+                    session.setAttribute("loginAttempts", 0);
+                    RequestDispatcher dispatcher = request.getRequestDispatcher("/ReviewInfoServlet");
+                    dispatcher.forward(request, response);
                     break;
                 case "系统管理员":
                     response.sendRedirect("teacher.jsp");

@@ -48,7 +48,10 @@ public class studentQueryServlet extends HttpServlet {
                 request.getRequestDispatcher("studentQuery.jsp").forward(request, response);
             }
 
-        } else {
+        } else if (session.getAttribute("role").equals("研究生院领导")||
+                session.getAttribute("role").equals("学院研究生秘书")||
+                session.getAttribute("role").equals("学院领导")
+        ){
             if (name.equals(basicInfo.getName()) && user.getDepartment().equals(basicInfo.getCollege())) {
                 session.setAttribute("userid", studentID);
                 LOGGER.info("Successful student query for user " + studentID);

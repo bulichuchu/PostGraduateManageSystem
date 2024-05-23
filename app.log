@@ -12,3 +12,52 @@
 2024-05-21 19:05:25 INFO  InfoServlet:47 - Retrieved information for user 1
 2024-05-22 16:18:36 INFO  LoginServlet:58 - User 7 logged in successfully.
 2024-05-22 16:19:09 INFO  LoginServlet:58 - User 7 logged in successfully.
+2024-05-22 16:21:45 WARN  LoginServlet:94 - Failed login attempt for user 9
+2024-05-23 15:45:02 INFO  LoginServlet:58 - User 7 logged in successfully.
+2024-05-23 15:45:14 INFO  studentQueryServlet:57 - Successful student query for user 1
+2024-05-23 15:45:16 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-05-23 15:47:05 INFO  LoginServlet:58 - User 7 logged in successfully.
+2024-05-23 15:47:14 INFO  studentQueryServlet:57 - Successful student query for user 1
+2024-05-23 15:47:16 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-05-23 15:47:22 WARN  studentQueryServlet:61 - Failed student query for user 1
+2024-05-23 15:56:46 INFO  LoginServlet:58 - User 7 logged in successfully.
+2024-05-23 15:57:07 WARN  studentQueryServlet:61 - Failed student query for user 1
+2024-05-23 15:57:44 INFO  LoginServlet:58 - User 7 logged in successfully.
+2024-05-23 15:59:52 INFO  LoginServlet:58 - User 7 logged in successfully.
+2024-05-23 16:00:15 INFO  LoginServlet:58 - User 7 logged in successfully.
+2024-05-23 16:00:35 INFO  LoginServlet:58 - User 7 logged in successfully.
+2024-05-23 16:01:07 INFO  LoginServlet:58 - User 7 logged in successfully.
+2024-05-23 16:03:00 INFO  LoginServlet:58 - User 7 logged in successfully.
+2024-05-23 16:06:07 INFO  LoginServlet:58 - User 7 logged in successfully.
+2024-05-23 16:09:03 INFO  LoginServlet:58 - User 7 logged in successfully.
+2024-05-23 16:21:38 INFO  LoginServlet:58 - User 7 logged in successfully.
+2024-05-23 16:21:54 INFO  studentQueryServlet:57 - Successful student query for user 1
+2024-05-23 16:22:21 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-05-23 16:22:31 INFO  LoginServlet:58 - User 7 logged in successfully.
+2024-05-23 16:27:39 INFO  LoginServlet:58 - User 7 logged in successfully.
+2024-05-23 16:46:08 INFO  LoginServlet:58 - User 7 logged in successfully.
+2024-05-23 16:50:43 INFO  LoginServlet:58 - User 7 logged in successfully.
+2024-05-23 16:53:05 WARN  LoginServlet:95 - Failed login attempt for user 7
+2024-05-23 16:53:25 INFO  LoginServlet:58 - User 7 logged in successfully.
+2024-05-23 16:54:12 INFO  studentQueryServlet:57 - Successful student query for user 1
+2024-05-23 16:54:14 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-05-23 16:56:26 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-05-23 16:58:00 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-05-23 17:00:02 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-05-23 17:02:09 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-05-23 17:03:01 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-05-23 17:03:55 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-05-23 17:05:47 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-05-23 17:20:36 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-05-23 17:24:02 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-05-23 17:38:44 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-05-23 17:47:00 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-05-23 17:47:22 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-05-23 17:50:03 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-05-23 17:51:15 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-05-23 17:53:11 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-05-23 17:58:39 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-05-23 18:02:45 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-05-23 18:03:24 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-05-23 18:07:10 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-05-23 18:07:46 INFO  LoginServlet:58 - User 9 logged in successfully.

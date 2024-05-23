@@ -35,6 +35,13 @@
         .btn-primary:hover {
             background-color: #0056b3;
         }
+        .btn-warning {
+            background-color: #ffc107;
+            border: none;
+        }
+        .btn-warning:hover {
+            background-color: #ffae00;
+        }
         .alert {
             margin-top: 20px;
         }
@@ -47,7 +54,7 @@
 <div class="container">
     <div class="form-section">
         <h2 class="mb-4">查询学生信息</h2>
-        <form action="searchStudent" method="get">
+        <form action="searchStudent" method="get" id="searchForm">
             <div class="form-group row">
                 <label for="studentID" class="col-sm-2 col-form-label">学号</label>
                 <div class="col-sm-10">
@@ -67,23 +74,22 @@
 
         <!-- 修改按钮 -->
         <div class="text-center mt-3">
-            <form action="ReviewInfoServlet" method="get">
-                <button type="submit" class="btn btn-warning">修改</button>
-            </form>
+            <button onclick="submitForm()" class="btn btn-warning">修改</button>
         </div>
 
-        <c:if test="${not empty errorMessage}">
+        <c:if test="${errorMessage}">
             <div class="alert alert-danger text-center mt-3">
                     ${errorMessage}
             </div>
         </c:if>
 
-    <%--@elvariable id="errorMessage" type="com.example.postgraduatemanagesystem.servlet.studentQueryServlet"--%>
-        <c:if test="${not empty errorMessage}">
-            <div class="alert alert-danger text-center">
-                    ${errorMessage}
-            </div>
-        </c:if>
+        <script>
+            function submitForm() {
+                var studentID = document.getElementById("studentID").value;
+                var name = document.getElementById("name").value;
+                window.location.href = "QueryChangeServlet?studentID=" + studentID + "&name=" + name;
+            }
+        </script>
     </div>
 </div>
 </body>
