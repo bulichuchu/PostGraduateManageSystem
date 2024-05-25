@@ -1,13 +1,30 @@
+<%@ page import="com.example.postgraduatemanagesystem.bean.BasicInfo" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>信息审核</title>
+    <title>审核信息</title>
+    <script type="text/javascript">
+        // 页面加载时检查是否更新成功并显示提示框
+        window.onload = function() {
+            <% Boolean updateSuccess = (Boolean) session.getAttribute("updateSuccess");
+               if (updateSuccess != null && updateSuccess) { %>
+            alert("信息修改成功！");
+            <% }else {%>
+            alert("信息修改失败！");
+            <% session.removeAttribute("updateSuccess"); %>
+            <% } %>
+        };
+    </script>
 </head>
 <body>
 <h1>信息审核</h1>
 
+
+
+<form action="ProcessReviewedInfoServlet" method="post">
 <table border="1">
     <thead>
     <tr>
@@ -31,30 +48,35 @@
     </tr>
     </thead>
     <tbody>
-    <jsp:useBean id="infoList" scope="request" type="java.util.List<com.example.postgraduatemanagesystem.bean.BasicInfo>"/>
-    <c:forEach items="${infoList}" var="info">
+    <% List<BasicInfo> infoList = (List<BasicInfo>) request.getAttribute("infoList");
+        if (infoList != null && !infoList.isEmpty()) {
+            for (BasicInfo info : infoList) { %>
         <tr>
-            <td>${info.studentID}</td>
-            <td>${info.name}</td>
-            <td>${info.namePY}</td>
-            <td>${info.gender}</td>
-            <td>${info.nation}</td>
-            <td>${info.birthDate}</td>
-            <td>${info.nativePlace}</td>
-            <td>${info.politicalStatus}</td>
-            <td>${info.IDNumber}</td>
-            <td>${info.IDType}</td>
-            <td>${info.maritalStatus}</td>
-            <td>${info.birthPlace}</td>
-            <td>${info.familyAddress}</td>
-            <td>${info.phoneNumber}</td>
-            <td>${info.campusEmail}</td>
-            <td>${info.personalEmail}</td>
-            <td>${info.joinPartyDate}</td>
+            <td><%= info.getStudentID()%></td>
+            <td><%= info.getNamePY() %></td>
+            <td><%= info.getGender() %></td>
+            <td><%= info.getNation() %></td>
+            <td><%= info.getBirthDate() %></td>
+            <td><%= info.getNativePlace() %></td>
+            <td><%= info.getPoliticalStatus() %></td>
+            <td><%= info.getIDNumber() %></td>
+            <td><%= info.getIDType() %></td>
+            <td><%= info.getMaritalStatus() %></td>
+            <td><%= info.getBirthPlace() %></td>
+            <td><%= info.getFamilyAddress() %></td>
+            <td><%= info.getPhoneNumber() %></td>
+            <td><%= info.getCampusEmail() %></td>
+            <td><%= info.getPersonalEmail() %></td>
+            <td><%= info.getJoinPartyDate() %></td>
         </tr>
-    </c:forEach>
-    </tbody>
+        <% }
+       } else { %>
+    <tr>
+        <td colspan="7">没有待审核的信息</td>
+    </tr>
+        <% } %>
 </table>
-
+    <input type="submit" value="同意变更">
+</form>
 </body>
 </html>

@@ -110,7 +110,6 @@ public class BasicInfoDAOImpl implements BasicInfoDAO {
 
     @Override
     public boolean updateBasicInfo(BasicInfo updatedInfo) {
-        BasicInfo basicInfo = new BasicInfo();
         PreparedStatement pstmt = null;
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -120,22 +119,22 @@ public class BasicInfoDAOImpl implements BasicInfoDAO {
                     "marital_status = ?, BirthPlace = ?, family_address = ?, phone_number = ?, " +
                     "campus_email = ?, personal_email = ?, join_party_date = ? WHERE StudentID = ?";
             pstmt = con.prepareStatement(sql);
-            pstmt.setString(1, basicInfo.getName());
-            pstmt.setString(2, basicInfo.getGender());
-            pstmt.setDate(3, new java.sql.Date(basicInfo.getBirthDate().getTime()));
-            pstmt.setString(4, basicInfo.getNation());
-            pstmt.setString(5, basicInfo.getNativePlace());
-            pstmt.setString(6, basicInfo.getPoliticalStatus());
-            pstmt.setString(7, basicInfo.getIDNumber());
-            pstmt.setString(8, basicInfo.getIDType());
-            pstmt.setString(9, basicInfo.getMaritalStatus());
-            pstmt.setString(10, basicInfo.getBirthPlace());
-            pstmt.setString(11, basicInfo.getFamilyAddress());
-            pstmt.setString(12, basicInfo.getPhoneNumber());
-            pstmt.setString(13, basicInfo.getCampusEmail());
-            pstmt.setString(14, basicInfo.getPersonalEmail());
-            pstmt.setDate(15, new java.sql.Date(basicInfo.getJoinPartyDate().getTime()));
-            pstmt.setInt(16, basicInfo.getStudentID());
+            pstmt.setString(1, updatedInfo.getName());
+            pstmt.setString(2, updatedInfo.getGender());
+            pstmt.setDate(3, new java.sql.Date(updatedInfo.getBirthDate().getTime()));
+            pstmt.setString(4, updatedInfo.getNation());
+            pstmt.setString(5, updatedInfo.getNativePlace());
+            pstmt.setString(6, updatedInfo.getPoliticalStatus());
+            pstmt.setString(7, updatedInfo.getIDNumber());
+            pstmt.setString(8, updatedInfo.getIDType());
+            pstmt.setString(9, updatedInfo.getMaritalStatus());
+            pstmt.setString(10, updatedInfo.getBirthPlace());
+            pstmt.setString(11, updatedInfo.getFamilyAddress());
+            pstmt.setString(12, updatedInfo.getPhoneNumber());
+            pstmt.setString(13, updatedInfo.getCampusEmail());
+            pstmt.setString(14, updatedInfo.getPersonalEmail());
+            pstmt.setDate(15, new java.sql.Date(updatedInfo.getJoinPartyDate().getTime()));
+            pstmt.setInt(16, updatedInfo.getStudentID());
             pstmt.executeUpdate();
 
         } catch (Exception e) {

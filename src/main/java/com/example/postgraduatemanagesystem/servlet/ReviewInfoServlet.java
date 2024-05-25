@@ -43,6 +43,8 @@ public class ReviewInfoServlet extends HttpServlet {
         }
 
         // 将信息列表存储在请求属性中
+        HttpSession session = request.getSession();
+        session.setAttribute("infoList", infoList);
         request.setAttribute("infoList", infoList);
         request.getRequestDispatcher("reviewInfo.jsp").forward(request, response);
 
