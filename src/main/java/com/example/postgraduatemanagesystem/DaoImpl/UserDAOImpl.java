@@ -116,5 +116,32 @@ public class UserDAOImpl implements UserDAO {
         return user;
     }
 
+    @Override
+    public boolean changeRole(String studentID, String role) {
+
+        PreparedStatement pstmt = null;
+        boolean success = false;
+        try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            Connection con = DriverManager.getConnection(connectionUrl);
+            // 更新用户表
+            String sql = "UPDATE users SET role=? WHERE UserID=?";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, role);
+            pstmt.setString(2, studentID);
+            pstmt.executeUpdate();
+            success = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (pstmt != null) pstmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return success;
+    }
+
 }
 

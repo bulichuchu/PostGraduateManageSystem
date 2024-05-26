@@ -6,4 +6,6 @@ public interface UserDAO {
     boolean available(String username, String password);
     User getUser(String username, String password);
     User getUser(String userid);
+
+    boolean changeRole(String studentID, String role);
 }
