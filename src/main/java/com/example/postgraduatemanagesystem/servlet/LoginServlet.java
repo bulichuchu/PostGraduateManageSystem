@@ -82,9 +82,11 @@ public class LoginServlet extends HttpServlet {
                     dispatcher.forward(request, response);
                     break;
                 case "系统管理员":
+                    session.setAttribute("loginAttempts", 0);
                     response.sendRedirect("ChangeRole.jsp");
                     break;
                 case "审计管理员":
+                    session.setAttribute("loginAttempts", 0);
                     response.sendRedirect("log.jsp");
                     break;
             }
