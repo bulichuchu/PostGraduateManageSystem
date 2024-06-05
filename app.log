@@ -75,3 +75,46 @@
 2024-05-26 15:22:35 INFO  LoginServlet:58 - User 10 logged in successfully.
 2024-05-26 15:23:27 INFO  LoginServlet:58 - User 10 logged in successfully.
 2024-05-26 15:26:57 INFO  LoginServlet:58 - User 1 logged in successfully.
+2024-05-30 10:01:46 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-05-30 10:02:08 INFO  LoginServlet:58 - User 9 logged in successfully.
+2024-06-05 14:04:47 WARN  LoginServlet:102 - Failed login attempt for user 1
+2024-06-05 14:06:00 WARN  LoginServlet:102 - Failed login attempt for user 1
+2024-06-05 14:14:05 WARN  LoginServlet:101 - Failed login attempt for user 1
+2024-06-05 14:17:17 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-05 14:17:19 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-05 14:21:33 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-05 14:21:35 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-05 14:27:12 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-05 14:27:14 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-05 14:31:30 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-05 14:31:32 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-05 14:34:17 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-05 14:34:19 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-05 14:41:59 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-05 14:42:00 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-05 14:49:23 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-05 14:49:23 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-05 14:49:24 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-05 14:49:24 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-05 14:52:12 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-05 14:52:15 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-05 14:52:46 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-05 14:52:48 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-05 14:58:55 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-05 14:58:56 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-05 15:04:57 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-05 15:04:59 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-05 15:07:13 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-05 15:07:16 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-05 15:11:46 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-05 15:11:48 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-05 15:45:29 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-05 15:45:31 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-05 15:46:27 INFO  LoginServlet:60 - User 9 logged in successfully.
+2024-06-05 15:53:33 INFO  LoginServlet:60 - User 9 logged in successfully.
+2024-06-05 15:55:33 INFO  LoginServlet:60 - User 9 logged in successfully.
+2024-06-05 15:57:10 INFO  LoginServlet:60 - User 9 logged in successfully.
+2024-06-05 16:43:00 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-05 16:43:02 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-05 16:44:12 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-05 16:44:14 INFO  InfoServlet:47 - Retrieved information for user 1

@@ -51,7 +51,7 @@ public class InfoServlet extends HttpServlet {
         request.setAttribute("extensionInfo", extensionInfo);
         request.setAttribute("workExperience", workExperience);
         request.setAttribute("educationExperience", educationExperience);
-        request.getRequestDispatcher("Info.jsp").forward(request, response);
+        request.getRequestDispatcher("studentLoginInfo.jsp").forward(request, response);
     }
 
 

@@ -8,15 +8,15 @@
     <title>审核信息</title>
     <script type="text/javascript">
         // 页面加载时检查是否更新成功并显示提示框
-        window.onload = function() {
+        function showSuccessMessage() {
             <% Boolean updateSuccess = (Boolean) session.getAttribute("updateSuccess");
                if (updateSuccess != null && updateSuccess) { %>
             alert("信息修改成功！");
-            <% }else {%>
-            alert("信息修改失败！");
             <% session.removeAttribute("updateSuccess"); %>
             <% } %>
-        };
+        }
+
+        document.getElementById('submit').onclick = showSuccessMessage;
     </script>
 </head>
 <body>

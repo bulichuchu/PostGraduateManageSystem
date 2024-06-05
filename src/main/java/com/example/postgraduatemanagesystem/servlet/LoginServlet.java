@@ -9,6 +9,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import org.apache.log4j.Logger;
+import com.example.postgraduatemanagesystem.SM3.SM3Util;
+import org.bouncycastle.jcajce.provider.digest.SM3;
 
 import java.io.IOException;
 import java.io.Serial;
@@ -27,8 +29,7 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
         HttpSession session = request.getSession();
         session.setMaxInactiveInterval((int) SESSION_TIMEOUT / 1000);
-        UserDAOImpl userDAO = new UserDAOImpl();
-        User user = userDAO.getUser(userid, password);
+
 
         // 检查登录失败计数器
         Integer loginAttemptsAttribute = (Integer) session.getAttribute("loginAttempts");
@@ -48,11 +49,12 @@ public class LoginServlet extends HttpServlet {
             // 重置登录失败计数器
             session.setAttribute("loginAttempts", 0);
         }
-
+        UserDAOImpl userDAO = new UserDAOImpl();
+        User user = userDAO.getUser(userid, SM3Util.hash(password));
         if (user != null) {
             String role = user.getRole();
             session.setAttribute("userid", userid);
-            session.setAttribute("password", password);
+            session.setAttribute("password", SM3Util.hash(password));
             session.setAttribute("role", role);
             session.setAttribute("user", user);
             LOGGER.info("User " + userid + " logged in successfully.");
