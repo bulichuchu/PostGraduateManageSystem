@@ -18,7 +18,7 @@ public class ChangePasswordServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String userid = (String) session.getAttribute("userid");
         String password = (String) session.getAttribute("password");
-        String oldPassword = request.getParameter("currentPassword");
+        String oldPassword = SM3Util.hash(request.getParameter("currentPassword"));
         String newPassword = request.getParameter("newPassword");
         if (password.equals(oldPassword)){
 

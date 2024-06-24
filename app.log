@@ -118,3 +118,105 @@
 2024-06-05 16:43:02 INFO  InfoServlet:47 - Retrieved information for user 1
 2024-06-05 16:44:12 INFO  LoginServlet:60 - User 1 logged in successfully.
 2024-06-05 16:44:14 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-08 15:18:33 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-08 15:18:35 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-08 15:19:58 INFO  LoginServlet:60 - User 4 logged in successfully.
+2024-06-08 15:20:25 INFO  studentQueryServlet:33 - Successful student query for user 1
+2024-06-08 15:20:26 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-08 15:21:09 INFO  LoginServlet:60 - User 9 logged in successfully.
+2024-06-08 15:32:54 INFO  LoginServlet:60 - User 10 logged in successfully.
+2024-06-08 15:33:10 INFO  LoginServlet:60 - User 11 logged in successfully.
+2024-06-10 14:34:21 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-10 14:34:23 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-12 16:21:13 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-12 16:21:14 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-12 16:25:30 WARN  LoginServlet:101 - Failed login attempt for user 12
+2024-06-12 16:25:46 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-12 16:25:49 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-12 16:25:57 WARN  LoginServlet:101 - Failed login attempt for user 12
+2024-06-12 16:26:38 INFO  LoginServlet:60 - User 2 logged in successfully.
+2024-06-12 16:26:39 INFO  InfoServlet:47 - Retrieved information for user 2
+2024-06-12 21:01:57 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-12 21:01:58 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-12 23:12:53 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-12 23:12:54 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-12 23:12:55 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-12 23:12:56 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-12 23:49:14 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-12 23:49:16 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-13 00:42:53 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-13 00:42:56 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-13 00:45:16 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-13 00:45:19 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-13 00:46:56 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-13 00:46:59 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-13 00:47:36 WARN  LoginServlet:101 - Failed login attempt for user 9
+2024-06-13 00:49:16 INFO  LoginServlet:60 - User 9 logged in successfully.
+2024-06-13 00:50:53 INFO  LoginServlet:60 - User 4 logged in successfully.
+2024-06-13 00:51:24 INFO  studentQueryServlet:33 - Successful student query for user 1
+2024-06-13 00:51:32 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-13 00:54:14 INFO  LoginServlet:60 - User 11 logged in successfully.
+2024-06-13 10:55:26 INFO  LoginServlet:60 - User 2 logged in successfully.
+2024-06-13 10:55:28 INFO  LoginServlet:60 - User 2 logged in successfully.
+2024-06-13 10:55:31 INFO  LoginServlet:60 - User 2 logged in successfully.
+2024-06-13 10:55:31 INFO  LoginServlet:60 - User 2 logged in successfully.
+2024-06-13 10:57:08 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-13 10:58:50 INFO  LoginServlet:60 - User 2 logged in successfully.
+2024-06-13 10:58:53 INFO  InfoServlet:47 - Retrieved information for user 2
+2024-06-13 10:59:36 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-13 10:59:37 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-13 10:59:52 INFO  LoginServlet:60 - User 10 logged in successfully.
+2024-06-13 11:00:31 INFO  LoginServlet:60 - User 4 logged in successfully.
+2024-06-13 11:01:17 INFO  studentQueryServlet:33 - Successful student query for user 1
+2024-06-13 11:01:20 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-13 11:03:18 INFO  LoginServlet:60 - User 2 logged in successfully.
+2024-06-13 11:03:22 INFO  InfoServlet:47 - Retrieved information for user 2
+2024-06-13 11:03:37 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-13 11:09:30 INFO  LoginServlet:60 - User 11 logged in successfully.
+2024-06-13 11:11:36 INFO  LoginServlet:60 - User 4 logged in successfully.
+2024-06-13 11:12:03 INFO  studentQueryServlet:33 - Successful student query for user 1
+2024-06-13 11:12:06 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-13 11:12:45 INFO  LoginServlet:60 - User 2 logged in successfully.
+2024-06-13 11:12:48 INFO  InfoServlet:47 - Retrieved information for user 2
+2024-06-13 11:17:02 INFO  LoginServlet:60 - User 2 logged in successfully.
+2024-06-13 11:17:38 INFO  LoginServlet:60 - User 2 logged in successfully.
+2024-06-13 11:19:00 INFO  LoginServlet:60 - User 2 logged in successfully.
+2024-06-13 11:21:49 INFO  LoginServlet:60 - User 2 logged in successfully.
+2024-06-13 11:21:52 INFO  InfoServlet:47 - Retrieved information for user 2
+2024-06-13 11:22:10 INFO  LoginServlet:60 - User 2 logged in successfully.
+2024-06-13 11:22:13 INFO  InfoServlet:47 - Retrieved information for user 2
+2024-06-13 11:25:12 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-13 11:25:36 WARN  ChangePasswordServlet:34 - Failed password change for user 1
+2024-06-13 11:25:57 WARN  ChangePasswordServlet:34 - Failed password change for user 1
+2024-06-13 11:26:32 INFO  LoginServlet:60 - User 2 logged in successfully.
+2024-06-13 11:26:36 INFO  InfoServlet:47 - Retrieved information for user 2
+2024-06-22 21:48:20 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-23 13:27:50 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-23 13:27:52 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-23 13:30:11 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-23 13:33:46 WARN  ChangePasswordServlet:34 - Failed password change for user 1
+2024-06-23 13:33:57 INFO  LoginServlet:60 - User 2 logged in successfully.
+2024-06-23 13:33:59 INFO  InfoServlet:47 - Retrieved information for user 2
+2024-06-23 13:36:53 INFO  LoginServlet:60 - User 4 logged in successfully.
+2024-06-23 13:38:51 WARN  studentQueryServlet:37 - Failed student query for user 2
+2024-06-23 13:39:24 INFO  studentQueryServlet:33 - Successful student query for user 1
+2024-06-23 13:39:27 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-23 13:40:28 INFO  LoginServlet:60 - User 5 logged in successfully.
+2024-06-23 13:42:03 INFO  LoginServlet:60 - User 10 logged in successfully.
+2024-06-23 13:43:43 INFO  LoginServlet:60 - User 11 logged in successfully.
+2024-06-23 17:16:30 WARN  LoginServlet:101 - Failed login attempt for user 1
+2024-06-23 17:16:45 INFO  LoginServlet:60 - User 1 logged in successfully.
+2024-06-23 17:17:44 WARN  ChangePasswordServlet:34 - Failed password change for user 1
+2024-06-23 17:18:04 WARN  ChangePasswordServlet:34 - Failed password change for user 1
+2024-06-23 17:18:29 INFO  ChangePasswordServlet:29 - User 1 changed password successfully.
+2024-06-23 17:18:31 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-23 17:19:42 INFO  LoginServlet:60 - User 2 logged in successfully.
+2024-06-23 17:19:43 INFO  InfoServlet:47 - Retrieved information for user 2
+2024-06-23 17:19:52 INFO  LoginServlet:60 - User 3 logged in successfully.
+2024-06-23 17:20:15 INFO  ChangePasswordServlet:29 - User 3 changed password successfully.
+2024-06-23 17:20:17 INFO  InfoServlet:47 - Retrieved information for user 3
+2024-06-23 17:22:12 INFO  LoginServlet:60 - User 4 logged in successfully.
+2024-06-23 17:22:29 INFO  studentQueryServlet:33 - Successful student query for user 1
+2024-06-23 17:22:31 INFO  InfoServlet:47 - Retrieved information for user 1
+2024-06-23 17:23:22 INFO  LoginServlet:60 - User 9 logged in successfully.
+2024-06-23 17:24:07 INFO  LoginServlet:60 - User 10 logged in successfully.
