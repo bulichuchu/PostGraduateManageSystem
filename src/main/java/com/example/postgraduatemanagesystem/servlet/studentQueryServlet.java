@@ -59,7 +59,7 @@ public class studentQueryServlet extends HttpServlet {
             } else {
                 request.setAttribute("errorMessage", "学号与姓名不匹配，或您无权查看，请重新输入！");
                 LOGGER.warn("Failed student query for user " + studentID);
-                request.getRequestDispatcher("studentQuery.jsp").forward(request, response);
+                request.getRequestDispatcher("studetQuery.jsp").forward(request, response);
             }
         }
     }

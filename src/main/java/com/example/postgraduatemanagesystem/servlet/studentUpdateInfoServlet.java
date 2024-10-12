@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-@WebServlet(name = "studentUpdateInfoServlet", value = "/studentUpdateInfo")
+@WebServlet(name = "StudentUpdateInfoServlet", urlPatterns = {"/studentUpdateInfo"})
 public class studentUpdateInfoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
@@ -64,6 +64,8 @@ public class studentUpdateInfoServlet extends HttpServlet {
         extensionInfo.setFamilyContact(familyContact);
 
         extensionInfoDAO.updateExtensionInfo(extensionInfo);
-        response.sendRedirect("studentLoginInfo.jsp");
+
+        // 确保路径正确
+        response.sendRedirect(request.getContextPath() + "/StudentInfoServlet");
     }
 }

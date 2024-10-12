@@ -23,7 +23,7 @@ public class ReviewInfoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         // 在服务器上存储信息的目录路径
-        String directoryPath = "D:/IdeaProjects/PostGraduateManageSystem/ChangInfoJson/"; // 修改为服务器上实际的目录路径
+        String directoryPath = "C:\\Users\\yx\\IdeaProjects\\PostGraduateManageSystem\\ChangInfoJson\\"; // 修改为服务器上实际的目录路径
 
         // 获取存储在目录下的所有文件
         File directory = new File(directoryPath);

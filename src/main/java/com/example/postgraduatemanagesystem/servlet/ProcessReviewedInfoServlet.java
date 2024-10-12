@@ -18,24 +18,46 @@ public class ProcessReviewedInfoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         List<BasicInfo> infoList = (List<BasicInfo>) session.getAttribute("infoList");
-        String studentID = String.valueOf(infoList.get(0).getStudentID());
-        String directoryPath = "D:/IdeaProjects/PostGraduateManageSystem/ChangInfoJson/";
-        BasicInfoDAOImpl basicInfoDAO = new BasicInfoDAOImpl();
-        boolean updateSuccess = true;
+        String action = request.getParameter("action");
 
-        for (BasicInfo info : infoList) {
-            if (basicInfoDAO.updateBasicInfo(info)) {
-                File file = new File(directoryPath + studentID + ".json");
-                if (file.exists()) {
-                    file.delete();
+        if (action != null) {
+            String[] parts = action.split("_");
+            String operation = parts[0]; // "approve" or "reject"
+            String studentID = parts[1]; // student ID
+
+            BasicInfoDAOImpl basicInfoDAO = new BasicInfoDAOImpl();
+            BasicInfo infoToUpdate = null;
+            for (BasicInfo info : infoList) {
+                if (String.valueOf(info.getStudentID()).equals(studentID)) {
+                    infoToUpdate = info;
+                    break;
+                }
+            }
+
+            if (infoToUpdate != null) {
+                if ("approve".equals(operation)) {
+                    if (basicInfoDAO.updateBasicInfo(infoToUpdate)) {
+                        String directoryPath = "C:\\Users\\yx\\IdeaProjects\\PostGraduateManageSystem\\ChangInfoJson\\";
+                        File file = new File(directoryPath + studentID + ".json");
+                        if (file.exists()) {
+                            file.delete();
+                        }
+                        session.setAttribute("updateSuccess", true);
+                    } else {
+                        session.setAttribute("updateSuccess", false);
+                    }
+                } else if ("reject".equals(operation)) {
+                    // 处理不同意变更的逻辑，如果有需要的话
+                    session.setAttribute("updateSuccess", false);
                 }
             } else {
-                updateSuccess = false;
-                break;
+                session.setAttribute("updateSuccess", false);
             }
+        } else {
+            session.setAttribute("updateSuccess", false);
         }
-        session.setAttribute("updateSuccess", updateSuccess);
-        // 重定向到审核信息页面
+
+        // 重新加载数据并返回审核页面
         response.sendRedirect("reviewInfo.jsp");
     }
 }

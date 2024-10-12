@@ -66,7 +66,7 @@ public class LoginServlet extends HttpServlet {
                     } else {
                         // 重置登录失败计数器
                         session.setAttribute("loginAttempts", 0);
-                        RequestDispatcher dispatcher = request.getRequestDispatcher("/InfoServlet");
+                        RequestDispatcher dispatcher = request.getRequestDispatcher("/StudentInfoServlet");
                         dispatcher.forward(request, response);
                     }
                     break;

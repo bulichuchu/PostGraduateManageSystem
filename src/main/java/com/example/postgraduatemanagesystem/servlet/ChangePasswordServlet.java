@@ -18,7 +18,7 @@ public class ChangePasswordServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String userid = (String) session.getAttribute("userid");
         String password = (String) session.getAttribute("password");
-        String oldPassword = SM3Util.hash(request.getParameter("currentPassword"));
+        String oldPassword = request.getParameter("currentPassword");
         String newPassword = request.getParameter("newPassword");
         if (password.equals(oldPassword)){
 
@@ -33,6 +33,7 @@ public class ChangePasswordServlet extends HttpServlet {
             request.setAttribute("message", "与原密码不符，请重新输入！");
             LOGGER.warn("Failed password change for user " + userid);
             request.getRequestDispatcher("changePassword.jsp").forward(request, response);
+
         }
     }
 }

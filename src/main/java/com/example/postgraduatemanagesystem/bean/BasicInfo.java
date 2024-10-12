@@ -620,4 +620,5 @@ public class BasicInfo implements Serializable {
     public void setDateOfDegreeAward(Date dateOfDegreeAward) {
         this.dateOfDegreeAward = dateOfDegreeAward;
     }
+
 }

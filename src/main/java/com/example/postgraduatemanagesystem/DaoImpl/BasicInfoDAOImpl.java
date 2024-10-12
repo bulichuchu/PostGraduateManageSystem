@@ -121,7 +121,7 @@ public class BasicInfoDAOImpl implements BasicInfoDAO {
             pstmt = con.prepareStatement(sql);
             pstmt.setString(1, updatedInfo.getName());
             pstmt.setString(2, updatedInfo.getGender());
-            pstmt.setDate(3, new java.sql.Date(updatedInfo.getBirthDate().getTime()));
+            pstmt.setDate(3, new Date(updatedInfo.getBirthDate().getTime()));
             pstmt.setString(4, updatedInfo.getNation());
             pstmt.setString(5, updatedInfo.getNativePlace());
             pstmt.setString(6, updatedInfo.getPoliticalStatus());
@@ -133,7 +133,7 @@ public class BasicInfoDAOImpl implements BasicInfoDAO {
             pstmt.setString(12, updatedInfo.getPhoneNumber());
             pstmt.setString(13, updatedInfo.getCampusEmail());
             pstmt.setString(14, updatedInfo.getPersonalEmail());
-            pstmt.setDate(15, new java.sql.Date(updatedInfo.getJoinPartyDate().getTime()));
+            pstmt.setDate(15, new Date(updatedInfo.getJoinPartyDate().getTime()));
             pstmt.setInt(16, updatedInfo.getStudentID());
             pstmt.executeUpdate();
 

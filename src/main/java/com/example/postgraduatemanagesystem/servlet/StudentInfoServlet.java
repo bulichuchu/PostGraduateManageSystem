@@ -2,7 +2,6 @@ package com.example.postgraduatemanagesystem.servlet;
 
 import com.example.postgraduatemanagesystem.DaoImpl.*;
 import com.example.postgraduatemanagesystem.bean.*;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -13,8 +12,8 @@ import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.io.Serial;
-
-public class InfoServlet extends HttpServlet {
+@WebServlet("/StudentInfoServlet")
+public class StudentInfoServlet extends HttpServlet {
     @Serial
     private static final long serialVersionUID = 1L;
     private static final Logger LOGGER = Logger.getLogger(InfoServlet.class.getName());
@@ -52,8 +51,6 @@ public class InfoServlet extends HttpServlet {
         request.setAttribute("extensionInfo", extensionInfo);
         request.setAttribute("workExperience", workExperience);
         request.setAttribute("educationExperience", educationExperience);
-        request.getRequestDispatcher("Info.jsp").forward(request, response);
+        request.getRequestDispatcher("studentLoginInfo.jsp").forward(request, response);
     }
-
-
 }
